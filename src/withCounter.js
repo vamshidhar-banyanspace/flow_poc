@@ -1,11 +1,12 @@
 import React from 'react';
 
-class WithComponent extends React.Component{
-  render(){
-    return(
-      <h2>This is Hover component</h2>
-    )
+const UpdatedComponent = OriginalComponent => {
+  class NewComponent extends React.Component {
+    render(){
+      return <OriginalComponent name='Vamshidhar' />
+    }
   }
+  return NewComponent
 }
 
-export default WithComponent
+export default UpdatedComponent
