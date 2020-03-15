@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ClickComponent />
+        <ClickComponent name="HOC Component" />
         <HoverComponent />
         <p>
           Edit <code>src/App.js</code> and save to reload.

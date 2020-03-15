@@ -1,26 +1,15 @@
 import React from 'react';
-import UpdatedComponent from './withCounter'
+import withComponent from './withCounter'
 
 class HoverComponent extends React.Component{
-  constructor(props){
-    super(props);
 
-    this.state = {
-      count: 0
-    }
-  }
-
-  incrementCounter = () => {
-    this.setState(prevState => {
-      return {count: prevState.count + 1}
-    })
-  }
 
   render(){
+    const {name, count, increment} = this.props
     return(
-      <h3 onMouseOver={this.incrementCounter}>{this.props.name}, you hovered {this.state.count} times</h3>
+      <h3 onMouseOver={increment}>{name}, you hovered {count} times</h3>
     )
   }
 }
 
-export default UpdatedComponent(HoverComponent)
+export default withComponent(HoverComponent, 5)
